@@ -1,0 +1,13 @@
+<div id="admin-login">
+    <h1>Login</h1>
+    <div class="login-data">
+        <div><p>Email</p><input ng-model="adminEmail" type="text"></div>
+        <div><p>Password</p><input ng-model="adminPassword" type="password"></div>
+        <div class="remember-me"><p>Remember me:</p><input type="checkbox" ng-model="rememberAdmin"></div>
+        <div class="center"><input type="button" value="Login" ng-click="adminLogin()"></div>
+        <p ng-show="wrongData">Email sau parola gresita!</p>
+    </div>
+    <div class="more-info">
+    
+    </div>
+</div>

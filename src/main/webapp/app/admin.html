@@ -1,0 +1,54 @@
+
+
+<link rel="stylesheet" href="app/CSS/admin.css">
+<link rel="stylesheet" href="app/CSS/admin-home.css">
+<link rel="stylesheet" href="app/CSS/create-parking.css">
+<link rel="stylesheet" href="app/CSS/admin-parkings.css">
+<link rel="stylesheet" href="app/CSS/admin-login.css">
+
+<div id="page" ng-app="myApp" ng-controller="adminController">
+	<div id="left-menu">
+		<div id="user-welcome">
+			<div id="user-img">
+				<img src="https://vb.northsearegion.eu/files/theme/default-user-icon-profile.png" ng-if="!x.adminData.img">
+				<img src="{{x.adminData.img}}" ng-if="x.adminData.img">
+				
+				
+			</div>
+			<div id="welcome-user">
+				<h3>Bun venit</h3>
+				<h4>{{x.adminData.name}}</h4>				
+			</div>
+		</div>
+		<div id="menu-items">
+            <div ng-hide="x.adminData" class="menu-item" id="loginBtn"
+				ng-click="menuBtnCLick('loginBtn')">
+				<span class="fa fa-address-book"></span>
+				<p>Login</p>
+			</div>
+		   <div ng-show="x.adminData" class="menu-item" id="logoutBtn"
+				ng-click="adminLogout()">
+				<span class="fa fa-address-book"></span>
+				<p>Logout</p>
+			</div>
+			<div class="menu-item" id="homeBtn"
+				ng-click="menuBtnCLick('homeBtn')">
+				<span class="fa fa-home"></span>
+				<p>Acasa</p>
+			</div>
+			<div class="menu-item" id="parkingBtn"
+				ng-click="menuBtnCLick('parkingBtn')">
+				<span class="fa fa-car"></span>
+				<p>Creaza</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="right-content">
+		<div id="content">
+            <admin-parking></admin-parking>
+            <admin-home></admin-home>
+            <admin-login></admin-login>
+		</div>
+	</div>
+</div>

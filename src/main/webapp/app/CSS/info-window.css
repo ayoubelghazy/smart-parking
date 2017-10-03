@@ -1,0 +1,53 @@
+.info-window{
+    display: inline-block;
+    width: 300px;
+    margin:20px;
+
+}
+.info-window-head{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 0px;
+    font-size: 25px;
+    display: block;
+    text-align: center;
+}
+
+.park-name{
+    margin: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.info-window-content{
+    margin-left: 5px;
+    margin-right: 5px;
+    border-top: 1px solid rgb(47, 123, 184);
+    color: #ab9090;
+    
+}
+.desc{
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    word-wrap: break-word;
+    padding-top: 20px;
+}
+.distance{
+    
+}
+.credit-card{
+    text-align: center;
+    color: rgb(47, 123, 184);
+    font-size: 20px;
+    font-weight: bold;
+    border-top: 1px solid rgb(47, 123, 184);
+    padding-top: 10px
+}
+.price{
+    text-align: right;
+    padding-right: 20px;
+    color: green;
+    font-size: 20px;
+    margin: 0px;
+}

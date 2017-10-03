@@ -1,0 +1,89 @@
+#content{
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+.small-panel{
+    position: relative;
+    display: inline-block;
+	box-shadow: 0px 10px 1px;
+    background-color: rgba(18, 72, 98, 0.81);
+    width: 32.5%;
+    min-width: 300px;
+    height: 320px;
+    min-height: 300px;
+    margin-top: 20px;
+    float:left;
+    margin-left: 10%;
+}
+.small-panel-content{
+	padding-top: 20px;
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	background-color: rgba(32, 88, 114, 0.81);
+	
+	
+}
+.small-panel h1{
+    color: #d7f4b0;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.small-panel p{
+ 	display: inline-block;
+	color: #e2d1d1;
+    height: 150px;
+    overflow:hidden;
+    word-wrap: break-word;
+    font-size: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 60%;
+}
+.small-panel img{
+	display: inline-block;
+	width: 30%;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	float:right;
+}
+.small-panel a{
+    display: inline-block;
+    width: 76%;
+    margin-left: 12%;
+    height: 40px;
+    position: absolute;
+    background-color: rgba(58  , 67, 69,1);
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    font-size: 20px;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+.small-panel a:hover{
+    background-color: #289d28;
+	color: aliceblue;
+}
+
+@media screen and (max-width:767px){
+	.small-panel{
+		position: relative;
+		display: inline-block;
+		box-shadow: 0px 0px 1px;
+		background-color: rgba(18, 72, 98, 0.81);
+		width: 80%;
+		min-width: 300px;
+		height: 320px;
+		min-height: 300px;
+		margin-top: 20px;
+		float:left;
+		margin-left: 10%;
+	}
+
+}

@@ -1,0 +1,258 @@
+#admin-home{
+    height: auto;
+    width: 100%;
+    color: aliceblue;
+}
+
+
+
+.daily-statistics{
+    width: 90%;
+    position: relative;
+    margin-left: 5%;
+    height: auto;
+    background-color: rgba(41, 57, 101, 0.63);
+    box-shadow: 0px 1px 5px rgb(0, 0, 0);
+    margin-top: 40px;
+}
+.chart{
+    width: 90%;
+    display: block;
+    overflow: auto;
+    height: 200px;
+    margin: 0px auto;
+    position: relative;
+}
+.daily-statistics>h3{
+    text-align: center;
+    height: 49px;
+    width: 100%;
+    line-height: 49px;
+    border-bottom: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+}
+input{
+    color: black;
+}
+
+.statistics-panel{
+    height: 100px;
+    display: inline-block;
+    width: 100%;
+
+    margin-top: 25px;
+}
+
+.statistic-panel{
+    display: inline-block;
+    width: 31%;
+    margin-left: 1%;
+    float: left;
+}
+.statistic-panel>p{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    color: #2aa32a;
+    width: 100%;
+    font-size: 20px;
+    
+}
+.statistic-panel>h1{
+    font-size: 25px;
+    text-align: center;
+}
+.vertica-split-color{
+    display: inline-block;
+    width: 1px;
+    float: left;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+}
+.vertica-split-nocolor{
+    height: 100%;
+    width: 1%;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+
+.show-more{
+    height: 19px;
+    border-top: 1px solid black;
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+    display: block;
+}
+
+.show-more>p{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    color: rgba(208, 198, 198, 0.66);
+}
+.show-more:hover{
+    background-color: rgba(61, 76, 119, 0.63);
+    cursor: pointer;
+}
+.category-panel{
+    height: auto;
+    display: block;
+    margin-top: 25px;
+    background-color: rgba(61, 76, 119, 0.63);
+    
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 2s;
+}
+.category-panel>div{
+    border-top: 1px solid  rgb(87, 101, 141);
+}
+
+
+.category-panel h3{
+    text-align: center;
+    height: 49px;
+    width: 100%;
+    line-height: 49px;
+    border-bottom: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+}
+.category-features{
+    height: auto;
+}
+
+.category-features>h3{
+    text-align: left;
+
+    border-bottom: none;
+    margin-left: 10px;
+
+    display: inline-block;
+}
+.category-features p{
+    height: auto;
+    color: #1eb059;
+    margin: 0px;
+    margin-left: 30px;
+    font-size: 20px;
+    
+}
+
+.category-daily-statistics{
+    height: 100px;
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+.category-actions{
+    width: 100%;
+    height: 40px;
+    display: block;
+    overflow: auto;
+}
+
+.delete-category{
+    width: 50%;
+    height: 40px;
+    background-color: #902121;
+    color: aliceblue;
+    border: 0px;
+    margin: 0px;
+    float: left;
+    padding: 0px;
+    outline: inherit;
+}
+.edit-category{
+    width: 50%;
+    height: 40px;
+    background-color: rgba(123, 123, 222, 0.84);
+    color: aliceblue;
+    border: 0px;
+    margin: 0px;
+    outline: inherit;
+    float: right;
+    padding: 0px;
+}
+
+
+
+/* MODAL */
+
+.modal-content{
+    background-color: rgb(61, 76, 119);
+    overflow: auto;
+    border-radius:0px;
+}
+.modal-footer{
+    background-color: rgb(61, 76, 119);
+}
+
+.modal-content > .create-category-panel{
+    box-shadow: none;
+    border:0px;
+}
+
+.add-new-cat{
+	max-height: 0px;
+	overflow: hidden;
+}
+.buttons{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+}
+
+.buttons>a{
+	display: inline-block;
+	height: 30px;
+    width: 30px;
+    border: 5px solid dodgerblue;
+	font-size: 40px;
+    line-height: 30px;
+	text-decoration: none;
+
+	color: dodgerblue;
+}
+buttons>a:hover{
+    border-color: aliceblue;
+    color: aliceblue;
+}
+.parkingOption{
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    background-color: rgba(123, 123, 222, 0.84);
+    color: aliceblue;
+    border: 0px;
+    margin: 0px;
+    outline: inherit;
+    float: right;
+    padding: 0px;
+}
+
+.delete{
+    background-color: rgba(219, 51, 51, 0.54);
+    top:5;
+    right: 5;
+    
+}
+.edit{
+    background-color: rgba(92, 92, 224, 0.71);
+    right: 60;
+    top:5;
+}
+.delete:hover{
+     background-color: rgba(219, 51, 51, 0.74);
+}
+.edit:hover{
+     background-color: rgba(92, 92, 224, 0.85);
+}

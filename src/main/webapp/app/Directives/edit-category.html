@@ -1,0 +1,39 @@
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="create-category-panel">
+
+                <h1>Editeaza datele categoriei</h1>
+                <div  class="form-item" >
+                    <span>Nume:</span>
+                    <input class="textbox" ng-model="selectedCategory.name" type="text">
+                </div>
+
+                <div  class="form-item" >
+                    <span>Locuri:</span>
+                    <input class="textbox" ng-model="selectedCategory.total_places" type="number">
+                </div>
+
+                <div class="form-item">
+                    <span>Inaltime maxima:</span>
+                    <input class="textbox" min-value="2" ng-model="selectedCategory.max_height" type="number">
+                </div>
+                <div class="form-item">
+                    <span>Pret/ora(lei):</span>
+                    <input class="textbox" ng-model="selectedCategory.price" type="number">
+                </div>
+                <div class="form-item">
+                    <span>Acoperita:</span>
+                    <input ng-init="selectedCategory.covered=false;" ng-model="selectedCategory.covered" type="checkbox">
+                </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="updateCategory()">Editeaza</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Inchide</button>
+      </div>
+    </div>
+  </div>

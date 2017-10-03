@@ -1,0 +1,107 @@
+
+
+
+
+
+<div id="admin-home">
+    <div class="daily-statistics" ng-repeat="parking in adminParkings">
+    	
+    							
+        <h3>{{parking.name}}</h3><input  class="parkingOption delete" type="button" ng-click="deleteParking(parking.id_parking)" value="delete"><input  class="parkingOption edit" type="button" ng-click="setEditedParking(parking);" value="edit" data-toggle="modal" data-target="#editPark" >
+        <div class="statistics-panel">
+            <div class="vertica-split-nocolor"></div>
+            <div class="statistic-panel">
+                <p>Locuri totale</p>
+                <h1>{{parking.totalPlaces}}</h1>        
+            </div> 			
+            <div class="vertica-split-color"></div>
+            <div class="statistic-panel">
+                <p>Ocupate</p> 
+                <h1>{{parking.busyPlaces}}</h1>
+            </div>
+            <div class="vertica-split-color"></div>
+            <div class="statistic-panel">
+                <p>Rezervari</p>
+                <h1>{{parking.totalReservations}}</h1>
+            </div>
+
+            
+            <div class="vertica-split-nocolor"></div>
+        </div>
+                    <div id="chart{{parking.id_parking}}" class="chart"> </div>
+                    
+        <div id="{{parking.id_parking}}-category" style="" class="category-panel" >
+            <div ng-repeat="cat in parking.categories">
+                <h3>{{cat.name}}</h3>
+                <div class="category-daily-statistics">
+                <div class="vertica-split-nocolor"></div>
+                <div class="statistic-panel">
+                    <p>Locuri totale</p>
+                    <h1>{{cat.total_places}}</h1>
+                </div>
+                <div class="vertica-split-color"></div>
+                <div class="statistic-panel">
+                    <p>Ocupate</p>
+                    <h1>{{cat.busy_places}}</h1>
+                </div>
+                <div class="vertica-split-color"></div>
+                <div class="statistic-panel">
+                    <p>Rezervari</p>
+                    <h1>{{cat.reservations}}</h1>
+                </div>
+                <div class="vertica-split-nocolor"></div>
+                </div>
+                <div class="category-features">
+                    <h3>Specificatii</h3>
+                    <p ng-show="cat.covered">Acoperita</p>
+                    <p>Inaltime maxima: {{cat.max_height}}</p>
+                </div>
+
+                <div class="category-actions">
+                    <input type="button" class="delete-category" ng-click="deleteCategory(cat.id_category)" value="Sterge">
+                    <input type="button" class="edit-category" ng-click="setSelectedCategory(cat)" data-toggle="modal" data-target="#myModal" value="Editeaza">
+                </div>
+            </div>
+        </div>
+    <div id="{{parking.id_parking}}-add-new-category" class="add-new-cat">
+			<div class="create-category-panel">
+    
+                <h1>Completeaza datele categoriei</h1>
+                <div  class="form-item" >
+                    <span>Nume:</span>
+                    <input class="textbox" ng-model="category.name" type="text">
+                </div>
+
+                <div  class="form-item" >
+                    <span>Locuri:</span>
+                    <input class="textbox" ng-model="category.total_places" type="number">
+                </div>
+
+                <div class="form-item">
+                    <span>Inaltime maxima:</span>
+                    <input class="textbox" min-value="2" ng-model="category.max_height" type="number">
+                </div>
+                <div class="form-item">
+                    <span>Pret/ora(lei):</span>
+                    <input class="textbox" ng-model="category.price" type="text">
+                </div>
+                <div class="form-item">
+                    <span>Acoperita:</span>
+                    <input ng-init="category.covered=false;" ng-model="category.covered" type="checkbox">
+                </div>
+
+            </div>
+			<input type="button" class="addCategory" value="Adauga" ng-click="addCategory(parking.id_parking,category)">
+		</div>
+		<div class="buttons">
+			<a id="{{parking.id_parking}}-add-btn" ng-click="expandAddNewCategoryForParking(parking.id_parking)">+</a>
+			<a style="display:none;" id="{{parking.id_parking}}-subtract-btn" ng-click="subtractAddCategoryForParking(parking.id_parking)">-</a>
+		</div>
+        <div class="show-more" ng-click="clickExpandButton(parking.id_parking)" ng-show="parking.categories.length!=0">
+            <p class="fa fa-arrow-down" id="{{parking.id_parking}}-btn" ></p>
+        </div>
+    </div>
+    <edit-category></edit-category>
+    <edit-parking></edit-parking>
+    
+</div>
